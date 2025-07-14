@@ -35,7 +35,11 @@ Copy .env.example to .env:
 ```bash
 cp .env.example .env
 ```
-Edit .env file sesuai konfigurasi database lokal:
+Edit the 
+```bash
+.env
+```
+file to match your local database configuration:
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -45,17 +49,17 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-4. Generate key
+4. Generate application key
 ```bash
 php artisan key:generate
 ```
 
-5. Run migrations and seeders
+5. Run database migrations and seeders
 ```bash
 php artisan migrate --seed
 ```
 
-6. Serve locally
+6. Start the local development server
 ```bash
 php artisan serve
 ```
@@ -77,24 +81,35 @@ Endpoints
 | DELETE | /tasks/{id} | Delete task       |
 
 Query Parameters (optional)
-status=pending or completed
 
-sort=asc or desc
+```bash
+status=pending
+```
+or 
+```bash
+completed
+```
+```bash
+sort=asc
+```
+or 
+```bash
+desc
+```
 
 🧪 Postman Collection
-Import koleksi Postman dari:
+You can import the Postman collection from:
 ```bash
 postman/TaskManager.postman_collection.json
 ```
-Atau klik di sini jika melihat dari GitHub.
 
 📐 Design Decisions
-Menggunakan Laravel MVC structure
+Built using Laravel's MVC architecture
 
-Folder Postman ditambahkan untuk dokumentasi API
+Includes a postman folder for API documentation
 
-File .env.testing untuk kebutuhan test
+Includes .env.testing for test-specific environment settings
 
-Seeder dan Factory disiapkan agar mudah testing data
+Database seeders and factories added for easier testing
 
-Menggunakan commit message dengan format standar
+Follows standardized commit message conventions
