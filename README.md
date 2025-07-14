@@ -62,17 +62,19 @@ php artisan serve
 
 🧱 API Structure
 Base URL
-bash
-Salin
-Edit
+```bash
 http://localhost:8000/api
+```
 Endpoints
-Method	URI	Description
-GET	/tasks	List all tasks
-GET	/tasks/{id}	Show task details
-POST	/tasks	Create new task
-PUT	/tasks/{id}	Update task
-DELETE	/tasks/{id}	Delete task
+## Endpoints
+
+| Method | URI         | Description       |
+|--------|-------------|-------------------|
+| GET    | /tasks      | List all tasks    |
+| GET    | /tasks/{id} | Show task details |
+| POST   | /tasks      | Create new task   |
+| PUT    | /tasks/{id} | Update task       |
+| DELETE | /tasks/{id} | Delete task       |
 
 Query Parameters (optional)
 status=pending or completed
@@ -81,10 +83,9 @@ sort=asc or desc
 
 🧪 Postman Collection
 Import koleksi Postman dari:
-pgsql
-Salin
-Edit
+```bash
 postman/TaskManager.postman_collection.json
+```
 Atau klik di sini jika melihat dari GitHub.
 
 📐 Design Decisions
